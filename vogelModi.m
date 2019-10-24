@@ -72,10 +72,12 @@ end
 
 function [r,k] = occupiedSystemSolve(occ,cost)
 % ===OTHER REQUIRED FUNCTIONS===
-n = size(cost,1);
+n = size(cost);
+m = n(1);
+n = n(2);
 r = zeros(1,n);
-k = r;
-A = sym('A',[2,n]);
+k = zeros(1,m);
+A = sym('A',[2,max(m,n)]);
 E = [];
 value = [];
 for i = 1:length(occ)
@@ -86,11 +88,11 @@ E = E==value;
 E = [E A(1,1) == 0];
 X = solve(E);
 X_cell = struct2cell(X);
-for i = 1: (n*2)
-    if i <= n
+for i = 1: (m+n)
+    if i <= m
         r(i) = X_cell{i};
     else
-        k(i-n) = X_cell{i};
+        k(i-m) = X_cell{i};
     end
 end
 end
