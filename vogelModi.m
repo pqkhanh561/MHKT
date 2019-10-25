@@ -120,3 +120,38 @@ demand = tempd;
 supply = temps;
 ctemp = ctem;
 end
+
+
+function get_possible_next_nodes(loop, not_visited):
+    last_node = max(loop);
+    nodes_in_row = [n for n in not_visited if n[0] == last_node[0]]
+    for i = 1:length(not_visited)
+        if not_visited(i)
+    end
+    nodes_in_column = [n for n in not_visited if n[1] == last_node[1]]
+    if len(loop) < 2:
+        return nodes_in_row + nodes_in_column
+    else:
+        prev_node = loop[-2]
+        row_move = prev_node[0] == last_node[0]
+        if row_move: return nodes_in_column
+        return nodes_in_row
+        end
+    end
+    end
+
+function [] = get_loop(bv_positions, ev_positions)
+    function  res = inner(loop)
+        if len(loop) > 3
+            can_be_closed = len(get_possible_next_nodes(loop, ev_position)) == 1;
+            if can_be_closed 
+                res  = loop;
+                return
+            end
+        end
+        not_visited = list(set(bv_positions) - set(loop));
+        possible_net_nodes = get_possible_next_nodes(loop, not visited);
+        for next_node 
+    end
+end
+
