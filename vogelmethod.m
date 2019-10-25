@@ -1,4 +1,4 @@
-function [ ibfs ] = vogelmethod( data )
+function [ cp, ibfs ] = VOGELMETHOD( data )
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 cost = data(1:end-1,1:end-1);
@@ -26,7 +26,8 @@ while length(find(demand==0)) < length(demand) || length(find(supply==0)) < leng
         ibfs(cind,mind) = amt;
     end
 end
-disp(ibfs)
-disp(sum(sum(cost.*ibfs)))
+% disp(ibfs)
+% disp(sum(sum(cost.*ibfs)))
+cp = sum(sum(cost.*ibfs));
 end
 
