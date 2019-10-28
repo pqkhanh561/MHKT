@@ -18,17 +18,17 @@ disp(r)
 disp('--> Chi phi');
 disp(t);
 
-disp('2) Phuong phap han che toi tieu')
-[t, r] = LCM(data);
-disp(r)
-disp('--> Chi phi');
-disp(t);
-
-disp('3) Phuong phap xap xi Vogel')
-[t , r] = VOGELMETHOD(data);
-disp(r)
-disp('--> Chi phi');
-disp(t);
+% disp('2) Phuong phap han che toi tieu')
+% [t, r] = LCM(data);
+% disp(r)
+% disp('--> Chi phi');
+% disp(t);
+% 
+% disp('3) Phuong phap xap xi Vogel')
+% [t , r] = VOGELMETHOD(data);
+% disp(r)
+% disp('--> Chi phi');
+% disp(t);
 
 
 cost = data(1:end-1,1:end-1);

@@ -1,20 +1,4 @@
 function [max_find, route] = LCM(data)
-%Least cost method
-% A = reshape(cost.',1,[]);
-% %Mark matrix
-% 
-% %Bubble sort with con
-% n = size(A,2);
-% for i = 1:(n-1)
-%     for j = (i+1):n
-%         if(A(i)> A(j))
-%             tmp = A(i);
-%             A(i) = A(j);
-%             A(j) = tmp;
-%         end
-%     end
-% end
-% disp(A)
 cost = data(1:end-1,1:end-1);
 dem = data(end,1:end-1);
 sup = data(1:end-1,end)';
