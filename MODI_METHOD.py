@@ -76,24 +76,6 @@ def can_be_improved(ws):
         if v > 0: return True
     return False
 
-
-#Chuyen bai toan khong can bang thanh bai toan can bang
-def get_balanced_tp(supply, demand, costs, penalties = None):
-    total_supply = sum(supply)
-    total_demand = sum(demand)
-    
-    if total_supply < total_demand:
-        if penalties is None:
-            raise Exception('Supply less than demand, penalties required')
-        new_supply = supply + [total_demand - total_supply]
-        new_costs = costs + [penalties]
-        return new_supply, demand, new_costs
-    if total_supply > total_demand:
-        new_demand = demand + [total_supply - total_demand]
-        new_costs = costs + [[0 for _ in demand]]
-        return supply, new_demand, new_costs
-    return supply, demand, costs
-
 def loop_pivoting(bfs, loop):
     even_cells = loop[0::2]
     odd_cells = loop[1::2]
@@ -123,12 +105,9 @@ def change_mbfs_to_bfs(bfs):
 
 
 def transportation_simplex_method(supply, demand, costs, bfs, penalties = None):
-    balanced_supply, balanced_demand, balanced_costs = get_balanced_tp(
-        supply, demand, costs
-    )
     def inner(bfs):
-        us, vs = get_us_and_vs(bfs, balanced_costs)
-        ws = get_ws(bfs, balanced_costs, us, vs)
+        us, vs = get_us_and_vs(bfs, costs)
+        ws = get_ws(bfs, costs, us, vs)
         if can_be_improved(ws):
             ev_position = get_entering_variable_position(ws)
             loop = get_loop([p for p, v in bfs], ev_position)

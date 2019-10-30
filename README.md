@@ -1,5 +1,6 @@
 # MHKT
 
+# Work
 Transportation problem is solved by many method. I instroduce some method to solve this problem without using linear programming.
 1) Method to find basis frist solution:
 	+ Northwest corner method
@@ -12,4 +13,8 @@ Output will be generate 'route.txt' which is the bfs
 2) Method to optimize bfs:
 	+ Modi method
 Using python
-Run 'MODIMETHOD.py' to run
+Run 'MODIMETHOD.py' to run. Note that algorithm solved the path in 'route.txt'
+
+#Future Work 
++ Unbalanced problem
++ Stepping Stone
