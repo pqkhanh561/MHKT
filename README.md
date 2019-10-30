@@ -3,8 +3,8 @@
 # Work
 Transportation problem is solved by many method. We instroduce some methods to solve this problem without using linear programming.
 1) Method to find basis frist solution:
-	+ Northwest corner method
-	+ Least cost method
+	+ <p>Northwest corner method<p>
+	+ <p>Least cost method</p>
 	+ <p>Vogel approximation method</p>
 These three method is coded with matlab namely (NCM, LCM, VOGELMETHOD)
 To run from begin 'RunFile.m'
@@ -20,7 +20,7 @@ Run 'MODI_METHOD.py' to run. Note that algorithm solved the path in 'route.txt'
 + Stepping Stone
 
 <h1>Author</h1>
-+ Phan Quang Khanh
-+ Dang Thao Vy
-+ Luong Anh Nhat
++ <p>Phan Quang Khanh</p>
++ <p>Dang Thao Vy</p>
++ <p>Luong Anh Nhat</p>
 
