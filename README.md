@@ -15,11 +15,11 @@ Output will be generate 'route.txt' which is the bfs
 
 Run 'MODI_METHOD.py' to run. Note that algorithm solved the path in 'route.txt'
 
-#Future_Work 
+<h1>Future_Work </h1>
 + Unbalanced problem
 + Stepping Stone
 
-#Author
+<h1>Author</h1>
 + Phan Quang Khanh
 + Dang Thao Vy
 + Luong Anh Nhat
