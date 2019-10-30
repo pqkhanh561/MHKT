@@ -1,7 +1,7 @@
 # MHKT
 
 # Work
-Transportation problem is solved by many method. We instroduce some method to solve this problem without using linear programming.
+Transportation problem is solved by many method. We instroduce some methods to solve this problem without using linear programming.
 1) Method to find basis frist solution:
 	+ Northwest corner method
 	+ Least cost method
