@@ -15,7 +15,7 @@ Output will be generate 'route.txt' which is the bfs
 Using python
 Run 'MODI_METHOD.py' to run. Note that algorithm solved the path in 'route.txt'
 
-#Future Work 
+#Future_Work 
 + Unbalanced problem
 + Stepping Stone
 
