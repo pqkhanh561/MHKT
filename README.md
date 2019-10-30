@@ -17,7 +17,7 @@ Run 'MODI_METHOD.py' to run. Note that algorithm solved the path in 'route.txt'
 
 <h1>Future_Work </h1>
 <p>Unbalanced problem</p>
-<p>Stepping Stone</p>
+<p>Stepping Stone Method</p>
 
 <h1>Author</h1>
 <p>Phan Quang Khanh</p>
